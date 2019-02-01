@@ -1,3 +1,12 @@
+=begin
+class Movies < Sequel::Model($sqlconnection[:"movies"])
+
+
+
+end
+=end
+
+
 module TablesDB
   class Movies < Sequel::Model($sqlconnection[:"movies"])
   end
@@ -7,3 +16,4 @@ module TablesDB
 
 
 end
+World(TablesDB)

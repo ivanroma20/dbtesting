@@ -1,5 +1,6 @@
-require '../support/job'
-require 'model/tables'
+# require '../support/job'
+# require 'model/tables'
+#
 Given(/^raw data is available$/) do
   result= $sqlconnection.execute("truncate table movies")
   @myfile='data/raw_movie.dat'
@@ -11,6 +12,7 @@ end
 
 Then(/^all data is captured$/) do
  result= TablesDB::Movies.all
+ #result= Movies.all
   expect(result.count).to be(3)
 end
 
